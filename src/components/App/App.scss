@@ -11,6 +11,10 @@
 
         &--Pink{
             color: pink;
+
+            .App:hover &{
+                color: yellow;
+            }
         }
     }   
 }
