@@ -1,0 +1,17 @@
+.App {
+    background-color: black;
+
+    &__Title{
+        color: blue;
+        font-size: 5rem;
+
+        .App:hover &{
+            color: red;
+        }
+
+        &--Pink{
+            color: pink;
+        }
+    }   
+}
+
