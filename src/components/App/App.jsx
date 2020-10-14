@@ -7,7 +7,7 @@ const App = () => {
     return (
         <div className="App">
             <h1 className="App__Title">
-            hejhejhejhej
+            hejhej
             </h1>
             <h1 className="App__Title App__Title--Pink">
             modifier
