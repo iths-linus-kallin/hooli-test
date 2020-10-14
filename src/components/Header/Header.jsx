@@ -12,6 +12,7 @@ const Header = () => {
     <Router>
       <Switch>
         <Route path="/">
+          {/* <img src="figma/cloud.png" alt="" className={ block("svg-logo") }/> */}
           <img src="figma/Hooli-logo.svg" alt="" className={ block("svg-logo") }/>
             <nav className={ block("nav-section") }>
               <NavLink to="/strength" activeClassName="active"> Vår styrka </NavLink>
