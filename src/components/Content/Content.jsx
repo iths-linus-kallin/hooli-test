@@ -1,12 +1,10 @@
 import React from 'react';
 import "./Content.scss";
+import {textData} from "../../data/data";
 
-
-{/* <Route path="/" >
-    <Content data={textData.strength} />
-</Route> */}
 
 const Content = () => {
+  console.log("OUTPUT ÄR: textData", textData)
   return (
     <div className="Content">
       <h1 className="Content__Title">
