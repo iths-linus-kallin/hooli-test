@@ -1,7 +1,11 @@
+@import "../App/App.scss";
+
 .Aside{
   display: flex;
   flex-direction: column;
   max-width: 44.3rem;
+  @include h1();
+
 
   &__SideImage{
     
