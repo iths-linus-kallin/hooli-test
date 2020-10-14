@@ -2,15 +2,19 @@ import React from 'react'
 import "./Aside.scss";
 
 const Employee = ({employee}) => {
+    
+console.log("Employee -> employee", employee)
+
   return (
     <li className="Employee">
       <figure className="Employee__Figure">
         <div className="Employee__ImageWrapper">
-          <img src="images/portraits/linus.jpg" alt="" className="Employee__Image"/>
+          <img src={employee.img} alt={employee.alt} className="Employee__Image"/>
+          {/* <img src={`./images/portraits/${employee.img}.jpg`} alt="" className="Employee__Image"/> */}
         </div>
         <figcaption className="Employee__FigCaption">
-          <h5 className="Employee__Name">Linus Kallin</h5>
-          <span className="Employee__Description">Professionell gamblare</span>
+          <h5 className="Employee__Name">{employee.name}</h5>
+          <span className="Employee__Description">{employee.description}</span>
         </figcaption>
       </figure>
     </li>
@@ -19,12 +23,29 @@ const Employee = ({employee}) => {
 
 const Aside = () => {
   const employees = [
-    {linus: {
+    {
         name: "Linus Kallin",
-        img: "linus.jpg",
-        description: "Professionell gamblare"
-
-    }}
+        img: "./images/portraits/linus.jpg",
+        description: "Professionell gamblare",
+        id: 1,
+        alt: "Bild på Linus"
+    },
+    {
+      name: "Jakob Gauffin",
+      // img: "jakob",
+      img: "images/portraits/linus.jpg",
+      description: "Professionell bagare",
+      id: 2,
+      alt: "Bild på Linus",
+    },
+    {
+      name: "Jessica Schwabegger",
+      img: "images/portraits/linus.jpg",
+      // img: "jessica",
+      description: "Professionell kodare",
+      id: 3,
+      alt: "Bild på Linus"
+    }
   ];
 
   return (
@@ -35,7 +56,16 @@ const Aside = () => {
       <section className="Aside__Employees">
 
         <ul className="Aside__List">
-          <Employee />
+          {employees && employees.map(x =>
+          
+        //   return (
+            // <div className="Aside__EmployeeWrapper" key={x.id}>
+              <Employee employee={x}/>
+            // </div>
+        //   )
+            
+          
+            )}
         </ul>
       
         <div className="Aside__Meta">
