@@ -6,6 +6,7 @@ const Employee = ({employee}) => {
     <li className="Employee">
       <figure className="Employee__Figure">
         <div className="Employee__ImageWrapper">
+          {/* <img src="figma/Hooli-logo.svg" alt="" className="Employee__Image"/> */}
           <img src="images/portraits/linus.jpg" alt="" className="Employee__Image"/>
         </div>
         <figcaption className="Employee__FigCaption">

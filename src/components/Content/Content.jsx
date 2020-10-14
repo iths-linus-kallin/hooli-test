@@ -1,6 +1,11 @@
 import React from 'react';
 import "./Content.scss";
 
+
+{/* <Route path="/" >
+    <Content data={textData.strength} />
+</Route> */}
+
 const Content = () => {
   return (
     <div className="Content">
