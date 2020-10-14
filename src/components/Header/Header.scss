@@ -1,0 +1,29 @@
+@import "../App/App.scss";
+
+.header {
+    align-items: center;
+    background-color: #D8F8FF;
+    display: flex;
+    justify-content: space-between;
+    height: 11.1rem;
+
+    &__svg-logo {
+        height: 4.7rem;
+        margin-left: 2.5rem;
+        width: 12.7rem;
+    }
+
+    &__nav-section {
+        margin-right: 1.5rem;
+    }
+
+    &__nav-section a {
+        @include h2();
+        margin: 0 1.5rem;
+        text-decoration: none;
+    }
+
+    &__nav-section a:hover {
+        color: $light-grey;
+    }
+}
