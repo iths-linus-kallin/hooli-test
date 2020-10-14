@@ -2,10 +2,10 @@
 
 .header {
     align-items: center;
-    background-color: #D8F8FF;
+    background-color: $light-blue;
     background-image: url(/figma/cloud.png), url(/figma/cloud.png);
     background-position: left center, right center;
-    background-size: 300px, 250px;
+    background-size: 500px, 350px;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;

@@ -20,13 +20,6 @@ const Header = () => {
             </nav>
         </Route>
       </Switch>
-
-      {/* <Switch>
-            <Route path="/strength" component={Battle}/>
-            <Route path="/wishes"><Battle /></Route>
-            <Route path="/flaws"><Stats /></Route>
-            <Route path="/work"><Upload /></Route>
-      </Switch> */}
     </Router>
     </div>
   )
