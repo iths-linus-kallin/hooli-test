@@ -28,6 +28,7 @@ const App = () => {
                     <Route path="/work"><Content /></Route>
                 </Switch>
             </Router>
+                <Content />
                 <Aside />
             </div>
             </div>
