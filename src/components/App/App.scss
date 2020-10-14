@@ -1,21 +1,26 @@
 .App {
-    background-color: black;
 
-    &__Title{
-        color: blue;
-        font-size: 5rem;
+    // &__Title{
+    //     color: blue;
+    //     font-size: 5rem;
 
-        .App:hover &{
-            color: red;
-        }
+    //     .App:hover &{
+    //         color: red;
+    //     }
 
-        &--Pink{
-            color: pink;
+    //     &--Pink{
+    //         color: pink;
 
-            .App:hover &{
-                color: yellow;
-            }
-        }
-    }   
+    //         .App:hover &{
+    //             color: yellow;
+    //         }
+    //     }
+    // }   
+    &__Grid{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        max-width: 1440px;
+    }
 }
 
