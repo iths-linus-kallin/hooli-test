@@ -1,0 +1,33 @@
+@import "../App/App.scss";
+
+.header {
+    align-items: center;
+    background-color: #D8F8FF;
+    background-image: url(/figma/cloud.png), url(/figma/cloud.png);
+    background-position: left center, right center;
+    background-size: 300px, 250px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    height: 9rem;
+
+    &__svg-logo {
+        height: 4.7rem;
+        margin-left: 2.5rem;
+        width: 12.7rem;
+    }
+
+    &__nav-section {
+        margin-right: 1.5rem;
+    }
+
+    &__nav-section a {
+        @include h2();
+        margin: 0 1.5rem;
+        text-decoration: none;
+    }
+
+    &__nav-section a:hover {
+        color: $light-grey;
+    }
+}

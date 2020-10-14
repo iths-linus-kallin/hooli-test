@@ -13,7 +13,20 @@ const Content = () => {
         Content
       </h1>
       <p className="Content__Text">
-        Text
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
+        Text Text Text Text Text Text Text Text Text Text 
       </p>
       <img className="Content__Image" src="" alt="image1"/>
     </div>

@@ -4,20 +4,21 @@
 @mixin h1(){
     font-family: 'Red Hat Text', sans-serif;
     font-size: 5rem;
-    font-weight: bold;
+    font-weight: 500;
     color: $black;
+    padding-bottom: 3rem;
 } 
 
 @mixin h2(){
     font-family: 'Red Hat Text', sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     color: $grey;
 } 
 
 @mixin p(){
     font-family: 'Red Hat Text', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $black;
     line-height: 1.5;
 } 
@@ -33,6 +34,12 @@ $black: black;
 $white: white;
 $light-blue: #D8F8FF;
 $grey: #3E3E3E;
+$light-grey: #7e7e7e;
+
+
+// BORDER-RADIUS
+$border-radius: 90px;
+
 
 .App {
 
