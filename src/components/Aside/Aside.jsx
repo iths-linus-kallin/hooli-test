@@ -1,15 +1,33 @@
 import React from 'react'
 import "./Aside.scss";
 
+const Employee = ({employee}) => {
+  return (
+    <li className="Employee">
+      <figure className="Employee__Figure">
+        <div className="Employee__ImageWrapper">
+          <img src="images/portraits/linus.jpg" alt="" className="Employee__Image"/>
+        </div>
+        <figcaption className="Employee__FigCaption">
+          <h5 className="Employee__Name">Linus Kallin</h5>
+          <span className="Employee__Description">Professionell gamblare</span>
+        </figcaption>
+      </figure>
+    </li>
+  )
+}
+
 const Aside = () => {
   return (
     <aside className="Aside">
 
-      <div className="Aside__SideImage">bild</div>
+      <div className="Aside__SideImage"></div>
 
       <section className="Aside__Employees">
+
         <ul className="Aside__List">
-          <li className="Aside__Item">
+          <Employee />
+          {/* <li className="Aside__Item">
             <figure className="Aside__Figure">
               <img src="" alt="" className="Aside__EmployeeImage"/>
               <figcaption className="Aside__FigCaption">
@@ -17,7 +35,7 @@ const Aside = () => {
                 <span className="Aside__EmployeeDescription">Professionell bagare</span>
               </figcaption>
             </figure>
-          </li>
+          </li> */}
         </ul>
       
         <div className="Aside__Meta">
