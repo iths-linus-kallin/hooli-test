@@ -18,6 +18,15 @@ const Employee = ({employee}) => {
 }
 
 const Aside = () => {
+  const employees = [
+    {linus: {
+        name: "Linus Kallin",
+        img: "linus.jpg",
+        description: "Professionell gamblare"
+
+    }}
+  ];
+
   return (
     <aside className="Aside">
 
@@ -27,15 +36,6 @@ const Aside = () => {
 
         <ul className="Aside__List">
           <Employee />
-          {/* <li className="Aside__Item">
-            <figure className="Aside__Figure">
-              <img src="" alt="" className="Aside__EmployeeImage"/>
-              <figcaption className="Aside__FigCaption">
-                <h5 className="Aside__EmployeeName">Jakob Gauffin</h5>
-                <span className="Aside__EmployeeDescription">Professionell bagare</span>
-              </figcaption>
-            </figure>
-          </li> */}
         </ul>
       
         <div className="Aside__Meta">
