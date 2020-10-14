@@ -12,6 +12,7 @@ const Header = () => {
     <Router>
       <Switch>
         <Route path="/">
+          {/* <img src="figma/cloud.png" alt="" className={ block("svg-logo") }/> */}
           <img src="figma/Hooli-logo.svg" alt="" className={ block("svg-logo") }/>
             <nav className={ block("nav-section") }>
               <NavLink to="/strength" activeClassName="active"> Vår styrka </NavLink>
@@ -23,13 +24,10 @@ const Header = () => {
       </Switch>
 
       {/* <Switch>
-            <Route path="/battle/:id1/:id2" component={Battle}/>
-            <Route path="/battle"><Battle /></Route>
-            <Route path="/stats"><Stats /></Route>
-            <Route path="/upload"><Upload /></Route>
-            <Route path="/matchresult"><MatchResult /></Route>
-            <Route path="/matchup/:id1/:id2" component={MatchUp}/>
-            <Route path="/"><StartPage /></Route>
+            <Route path="/strength" component={Battle}/>
+            <Route path="/wishes"><Battle /></Route>
+            <Route path="/flaws"><Stats /></Route>
+            <Route path="/work"><Upload /></Route>
       </Switch> */}
     </Router>
     </div>
