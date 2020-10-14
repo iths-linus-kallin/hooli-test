@@ -1,32 +1,33 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import "./Aside.scss";
 
 const Employee = ({employee}) => (
   <li className="Employee">
+
     <figure className="Employee__Figure">
-      <div className="Employee__ImageWrapper">
-        <img src={`images/portraits/${employee.img}`} alt={employee.alt} className="Employee__Image" 
-        style={{objectPosition: employee.focal.x + " " + employee.focal.y, width: employee.width}}
-        />
+      <div className="Employee__Outer">
+        <div className="Employee__ImageWrapper">
+
+          <img src={`images/portraits/${employee.img}`} alt={employee.alt} className="Employee__Image" 
+          style={{objectPosition: employee.focal.x + " " + employee.focal.y, width: employee.width}}
+          />
+
+        </div>
       </div>
+
       <figcaption className="Employee__FigCaption">
+
         <h5 className="Employee__Name">{employee.name}</h5>
         <span className="Employee__Description">{employee.description}</span>
+
       </figcaption>
+
     </figure>
+
   </li>
 );
 
 const Aside = () => {
-  const [randomImage, setRandomImage] = useState(1);
-
-  useEffect(() => {
-    setTimeout(() => {
-      randomImage !== 17 
-      ? setRandomImage(randomImage + 1)
-      : setRandomImage(1)
-    }, 3000)
-  }, [randomImage])
 
   const employees = [
     {
@@ -34,10 +35,10 @@ const Aside = () => {
         img: "linus.jpg",
         description: "Professionell gamblare",
         id: 1,
-        alt: "Bild på Linus",
+        alt: "Linus",
         focal: {
-          x: "50%",
-          y: "50%"
+          x: "0%",
+          y: "0%"
         },
     },
     {
@@ -45,32 +46,46 @@ const Aside = () => {
       img: "jakob.jpg",
       description: "Professionell bagare",
       id: 2,
-      alt: "Bild på Jakob",
+      alt: "Jakob",
       focal: {
-        x: "-42px",
-        y: "-7px"
+        x: "65%",
+        y: "0%"
       },
-      width: "160%"
-
     },
     {
       name: "Jessica Schwabegger",
       img: "jessica.jpg",
       description: "Professionell kodare",
       id: 3,
-      alt: "Bild på Jessica",
+      alt: "Jessica",
       focal: {
-        x: "7px",
-        y: "0px"
+        x: "0%",
+        y: "0%"
       },
-      width: "107%"
     }
   ];
 
   return (
     <aside className="Aside">
 
-      <div className="Aside__SideImage" style={{backgroundImage: `url("images/${randomImage}.jpg")`}}></div>
+      <div className="Aside__SideImage">
+        <img src="images/16.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/15.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/14.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/13.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/12.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/11.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/10.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/9.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/8.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/7.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/6.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/5.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/4.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/3.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/2.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/1.jpg" alt="" className="Aside__AsideImage"/>
+      </div>
 
       <section className="Aside__Employees">
 

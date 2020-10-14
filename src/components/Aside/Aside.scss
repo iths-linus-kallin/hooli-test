@@ -1,23 +1,114 @@
 @import "../App/App.scss";
 
+.Content{
+  margin: 0;
+  width: calc(997/1440 * 100%);
+  padding-right: 12.1rem;
+}
+
 .Aside{
   display: flex;
   flex-direction: column;
-  width: 34%;
+  width: calc(calc(443/1440) * 100%);
   padding-top: 2.1rem;
   height: 106rem;
-  
+
   &__SideImage{
     height: 29.5rem;
     width: 100%;
-    background-color: $light-blue;
-    background-position: center;
     border-top-left-radius: 9rem;
     border-bottom-left-radius: 9rem;
     margin-bottom: 2.1rem;
-    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    
+    img{
+      animation-name: cf4FadeInOut;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 80s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @keyframes cf4FadeInOut {
+        0% {
+          opacity:1;
+        }
+        5% {
+          opacity:1;
+        }
+        6.25% {
+          opacity:0;
+        }
+        98.75% {
+          opacity:0;
+        }
+        100% {
+          opacity:1;
+        }
+      }
+    }
+    
+    @for $i from 1 through 16{
+      img:nth-child(#{$i}){
+        animation-delay: calc(80s - calc(5s * #{$i}));
+      }
+    }
+
+    // img:nth-child(1) {
+    //   animation-delay: 75s;
+    // }
+    // img:nth-child(2) {
+    //   animation-delay: 70s;
+    // }
+    // img:nth-child(3) {
+    //   animation-delay: 65s;
+    // }
+    // img:nth-child(4) {
+    //   animation-delay: 60s;
+    // }
+    // img:nth-child(5) {
+    //   animation-delay: 55s;
+    // }
+    // img:nth-child(6) {
+    //   animation-delay: 50s;
+    // }
+    // img:nth-child(7) {
+    //   animation-delay: 45s;
+    // }
+    // img:nth-child(8) {
+    //   animation-delay: 40s;
+    // }
+    // img:nth-child(9) {
+    //   animation-delay: 35s;
+    // }
+    // img:nth-child(10) {
+    //   animation-delay: 30s;
+    // }
+    // img:nth-child(11) {
+    //   animation-delay: 25s;
+    // }
+    // img:nth-child(12) {
+    //   animation-delay: 20s;
+    // }
+    // img:nth-child(13) {
+    //   animation-delay: 15s;
+    // }
+    // img:nth-child(14) {
+    //   animation-delay: 10s;
+    // }
+    // img:nth-child(15) {
+    //   animation-delay: 5s;
+    // }
+    // img:nth-child(16) {
+    //   animation-delay: 0s;
+    // }
   }
-  
+
   &__List{
     padding: 0;
     margin: 0;
@@ -31,19 +122,21 @@
     width: 100%;
     border-top-left-radius: 9rem;
     background-color: $light-blue;
-    padding: 6.4rem 0 0 4.8rem;
+    padding: 6.4rem 4rem 0 4.8rem;
     z-index: 1;
+    height: 72.3rem;
     
     &::after{
       position: absolute;
       content: "";
       background-image: url(/figma/cloud.png);
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
-      width: 350px;
-      height: 250px;
-      bottom: 8rem;
-      right: -4rem;
+      background-position: center;
+      width: 508px;
+      height: 273px;
+      bottom: 2rem;
+      right: -9rem;
       z-index: -1;
     }
   }
@@ -69,9 +162,27 @@
     display: flex;
   }
 
+  &__Outer{
+      min-width: 8rem;
+
+      @include md{
+        min-width: 10rem;
+      }
+
+      @include lg{
+        min-width: 12rem;
+      }
+
+      @include xl{
+        min-width: 14.8rem;
+    }
+  }
+
   &__ImageWrapper{
-    width: 14.8rem;
-    height: 14.8rem;
+    max-width: 14.8rem;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
     position: relative;
     border-radius: 3rem;
     overflow: hidden;
@@ -79,9 +190,11 @@
 
   &__Image{
     position: absolute;
-    top:-5px;
-    left: -10px;
-    width: 115%;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__FigCaption{
