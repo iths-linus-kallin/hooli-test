@@ -1,8 +1,22 @@
 .header {
     background-color: #D8F8FF;
+    display: flex;
+    justify-content: space-between;
     height: 111px;
+
+    &__svg-logo {
+        background-image: url("./hooli-logo.svg");
+        background-repeat: no-repeat;
+        height: 47px;
+        width: 127px;
+    }
 
     &__nav-section {
         font-size: 16px;
+    }
+
+    &__nav-section a {
+        color: #3E3E3E;
+        text-decoration: none;
     }
 }

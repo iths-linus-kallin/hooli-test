@@ -8,17 +8,16 @@ const Header = () => {
 
   return (
     <div className={ block() }>
+    <div className={ block("svg-logo") }></div>
     <Router>
       <Switch>
         <Route path="/">
-          <header>
             <nav className={ block("nav-section") }>
               <NavLink to="/strength" activeClassName="active"> Vår styrka </NavLink>
               <NavLink to="/wishes" activeClassName="active"> Önskemål </NavLink>
               <NavLink to="/flaws" activeClassName="active"> Brister </NavLink>
               <NavLink to="/work" activeClassName="active"> Arbetssätt </NavLink>
             </nav>
-          </header>
         </Route>
       </Switch>
     </Router>
