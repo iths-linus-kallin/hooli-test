@@ -1,0 +1,12 @@
+@import "../App/App.scss";
+
+.Content {
+
+  &__Title{
+    @include h1();
+  }
+
+  &__Text{
+    @include p();
+  }  
+}
