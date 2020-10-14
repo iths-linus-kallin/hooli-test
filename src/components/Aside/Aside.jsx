@@ -1,70 +1,85 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import "./Aside.scss";
 
-const Employee = ({employee}) => {
-    
-console.log("Employee -> employee", employee)
-
-  return (
-    <li className="Employee">
-      <figure className="Employee__Figure">
-        <div className="Employee__ImageWrapper">
-          <img src={employee.img} alt={employee.alt} className="Employee__Image"/>
-          {/* <img src={`./images/portraits/${employee.img}.jpg`} alt="" className="Employee__Image"/> */}
-        </div>
-        <figcaption className="Employee__FigCaption">
-          <h5 className="Employee__Name">{employee.name}</h5>
-          <span className="Employee__Description">{employee.description}</span>
-        </figcaption>
-      </figure>
-    </li>
-  )
-}
+const Employee = ({employee}) => (
+  <li className="Employee">
+    <figure className="Employee__Figure">
+      <div className="Employee__ImageWrapper">
+        <img src={`images/portraits/${employee.img}`} alt={employee.alt} className="Employee__Image" 
+        style={{objectPosition: employee.focal.x + " " + employee.focal.y, width: employee.width}}
+        />
+      </div>
+      <figcaption className="Employee__FigCaption">
+        <h5 className="Employee__Name">{employee.name}</h5>
+        <span className="Employee__Description">{employee.description}</span>
+      </figcaption>
+    </figure>
+  </li>
+);
 
 const Aside = () => {
+  const [randomImage, setRandomImage] = useState(1);
+
+  useEffect(() => {
+    setTimeout(() => {
+      randomImage !== 17 
+      ? setRandomImage(randomImage + 1)
+      : setRandomImage(1)
+    }, 3000)
+  }, [randomImage])
+
   const employees = [
     {
         name: "Linus Kallin",
-        img: "./images/portraits/linus.jpg",
+        img: "linus.jpg",
         description: "Professionell gamblare",
         id: 1,
-        alt: "Bild på Linus"
+        alt: "Bild på Linus",
+        focal: {
+          x: "50%",
+          y: "50%"
+        },
     },
     {
       name: "Jakob Gauffin",
-      // img: "jakob",
-      img: "images/portraits/linus.jpg",
+      img: "jakob.jpg",
       description: "Professionell bagare",
       id: 2,
-      alt: "Bild på Linus",
+      alt: "Bild på Jakob",
+      focal: {
+        x: "-42px",
+        y: "-7px"
+      },
+      width: "160%"
+
     },
     {
       name: "Jessica Schwabegger",
-      img: "images/portraits/linus.jpg",
-      // img: "jessica",
+      img: "jessica.jpg",
       description: "Professionell kodare",
       id: 3,
-      alt: "Bild på Linus"
+      alt: "Bild på Jessica",
+      focal: {
+        x: "7px",
+        y: "0px"
+      },
+      width: "107%"
     }
   ];
 
   return (
     <aside className="Aside">
 
-      <div className="Aside__SideImage"></div>
+      <div className="Aside__SideImage" style={{backgroundImage: `url("images/${randomImage}.jpg")`}}></div>
 
       <section className="Aside__Employees">
 
         <ul className="Aside__List">
           {employees && employees.map(x =>
           
-        //   return (
-            // <div className="Aside__EmployeeWrapper" key={x.id}>
+            <div className="Aside__EmployeeWrapper" key={x.id}>
               <Employee employee={x}/>
-            // </div>
-        //   )
-            
-          
+            </div>
             )}
         </ul>
       
