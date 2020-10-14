@@ -18,6 +18,8 @@
     }
 
     &__nav-section {
+        align-self: flex-end;
+        padding-bottom: 1.5rem;
         margin-right: 1.5rem;
     }
 
@@ -30,4 +32,11 @@
     &__nav-section a:hover {
         color: $light-grey;
     }
+
+    // &__clicked {
+    //     padding: 1rem 1rem;
+    //     padding-bottom: inherit;
+    //     background-color: white;
+    //     border-radius: 1rem 1rem 0 0;
+    // }
 }

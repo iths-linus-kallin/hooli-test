@@ -13,10 +13,10 @@ const Header = () => {
         <Route path="/">
           <img src="figma/Hooli-logo.svg" alt="" className={ block("svg-logo") }/>
             <nav className={ block("nav-section") }>
-              <NavLink to="/strength" activeClassName="active"> Vår styrka </NavLink>
-              <NavLink to="/wishes" activeClassName="active"> Önskemål </NavLink>
-              <NavLink to="/flaws" activeClassName="active"> Brister </NavLink>
-              <NavLink to="/work" activeClassName="active"> Arbetssätt </NavLink>
+              <NavLink to="/strengths"> Vår styrka </NavLink>
+              <NavLink to="/wishes"> Önskemål </NavLink>
+              <NavLink to="/flaws"> Brister </NavLink>
+              <NavLink to="/works"> Arbetssätt </NavLink>
             </nav>
         </Route>
       </Switch>
