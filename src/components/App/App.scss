@@ -17,7 +17,7 @@
 
 @mixin p(){
     font-family: 'Red Hat Text', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: $black;
     line-height: 1.5;
 } 
@@ -33,6 +33,12 @@ $black: black;
 $white: white;
 $light-blue: #D8F8FF;
 $grey: #3E3E3E;
+$light-grey: #7e7e7e;
+
+
+// BORDER-RADIUS
+$border-radius: 90px;
+
 
 .App {
 
