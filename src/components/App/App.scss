@@ -4,8 +4,9 @@
 @mixin h1(){
     font-family: 'Red Hat Text', sans-serif;
     font-size: 5rem;
-    font-weight: bold;
+    font-weight: 500;
     color: $black;
+    padding-bottom: 3rem;
 } 
 
 @mixin h2(){
