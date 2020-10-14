@@ -18,8 +18,10 @@ const App = () => {
             modifier
             </h1> */}
             <Header />
-            <Content />
-            <Aside />
+            <div className="App__Row">
+                <Content />
+                <Aside />
+            </div>
             </div>
         </div>
     )
