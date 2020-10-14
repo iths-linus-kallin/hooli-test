@@ -2,7 +2,8 @@
 
 .Content {
 
-  margin: 6vw;
+  width: 66%;
+  padding: 6vw;
 
   &__Title{
     @include h1();
