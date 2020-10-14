@@ -2,6 +2,8 @@
 
 .Content {
 
+  margin: 6vw;
+
   &__Title{
     @include h1();
   }
