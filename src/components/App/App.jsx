@@ -10,7 +10,7 @@ import Aside from "../Aside/Aside";
 const App = () => {
     return (
         <div className="App">
-            <div className="App__Grid">
+            <div className="App">
             {/* <h1 className="App__Title">
             hejhejhej
             </h1>
