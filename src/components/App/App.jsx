@@ -6,7 +6,7 @@ import "./App.scss";
 const App = () => {
     return (
         <div className="App">
-            <h1 className="titelgrej">
+            <h1 className="App__Title">
             hejhejhej
             </h1>
             <h1 className="App__Title App__Title--Pink">
