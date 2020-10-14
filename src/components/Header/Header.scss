@@ -1,22 +1,27 @@
+@import "../App/App.scss";
+
 .header {
+    align-items: center;
     background-color: #D8F8FF;
     display: flex;
     justify-content: space-between;
-    height: 111px;
+    height: 11.1rem;
 
     &__svg-logo {
         background-image: url("./hooli-logo.svg");
         background-repeat: no-repeat;
-        height: 47px;
-        width: 127px;
+        height: 4.7rem;
+        margin-left: 2.5rem;
+        width: 12.7rem;
     }
 
     &__nav-section {
-        font-size: 16px;
+        margin-right: 1.5rem;
     }
 
     &__nav-section a {
-        color: #3E3E3E;
+        @include h2();
+        margin: 0 1.5rem;
         text-decoration: none;
     }
 }
