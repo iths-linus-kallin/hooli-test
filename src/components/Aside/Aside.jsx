@@ -1,70 +1,100 @@
 import React from 'react'
 import "./Aside.scss";
 
-const Employee = ({employee}) => {
-    
-console.log("Employee -> employee", employee)
+const Employee = ({employee}) => (
+  <li className="Employee">
 
-  return (
-    <li className="Employee">
-      <figure className="Employee__Figure">
+    <figure className="Employee__Figure">
+      <div className="Employee__Outer">
         <div className="Employee__ImageWrapper">
-          <img src={employee.img} alt={employee.alt} className="Employee__Image"/>
-          {/* <img src={`./images/portraits/${employee.img}.jpg`} alt="" className="Employee__Image"/> */}
+
+          <img src={`images/portraits/${employee.img}`} alt={employee.alt} className="Employee__Image" 
+          style={{objectPosition: employee.focal.x + " " + employee.focal.y, width: employee.width}}
+          />
+
         </div>
-        <figcaption className="Employee__FigCaption">
-          <h5 className="Employee__Name">{employee.name}</h5>
-          <span className="Employee__Description">{employee.description}</span>
-        </figcaption>
-      </figure>
-    </li>
-  )
-}
+      </div>
+
+      <figcaption className="Employee__FigCaption">
+
+        <h5 className="Employee__Name">{employee.name}</h5>
+        <span className="Employee__Description">{employee.description}</span>
+
+      </figcaption>
+
+    </figure>
+
+  </li>
+);
 
 const Aside = () => {
+
   const employees = [
     {
         name: "Linus Kallin",
-        img: "./images/portraits/linus.jpg",
+        img: "linus.jpg",
         description: "Professionell gamblare",
         id: 1,
-        alt: "Bild på Linus"
+        alt: "Linus",
+        focal: {
+          x: "0%",
+          y: "0%"
+        },
     },
     {
       name: "Jakob Gauffin",
-      // img: "jakob",
-      img: "images/portraits/linus.jpg",
+      img: "jakob.jpg",
       description: "Professionell bagare",
       id: 2,
-      alt: "Bild på Linus",
+      alt: "Jakob",
+      focal: {
+        x: "65%",
+        y: "0%"
+      },
     },
     {
       name: "Jessica Schwabegger",
-      img: "images/portraits/linus.jpg",
-      // img: "jessica",
+      img: "jessica.jpg",
       description: "Professionell kodare",
       id: 3,
-      alt: "Bild på Linus"
+      alt: "Jessica",
+      focal: {
+        x: "0%",
+        y: "0%"
+      },
     }
   ];
 
   return (
     <aside className="Aside">
 
-      <div className="Aside__SideImage"></div>
+      <div className="Aside__SideImage">
+        <img src="images/16.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/15.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/14.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/13.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/12.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/11.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/10.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/9.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/8.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/7.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/6.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/5.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/4.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/3.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/2.jpg" alt="" className="Aside__AsideImage"/>
+        <img src="images/1.jpg" alt="" className="Aside__AsideImage"/>
+      </div>
 
       <section className="Aside__Employees">
 
         <ul className="Aside__List">
           {employees && employees.map(x =>
           
-        //   return (
-            // <div className="Aside__EmployeeWrapper" key={x.id}>
+            <div className="Aside__EmployeeWrapper" key={x.id}>
               <Employee employee={x}/>
-            // </div>
-        //   )
-            
-          
+            </div>
             )}
         </ul>
       

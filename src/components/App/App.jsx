@@ -12,12 +12,11 @@ import Aside from "../Aside/Aside";
 const App = () => {
     console.log("OUTPUT ÄR: textData", textData);
 
-    // const {strengths, wishes} = textData;
     return (
         <div className="App">
+            <Router>
             <Header />
             <div className="App__Row">
-            <Router>
                 <Switch>
                     <Route exact path="/">
                             <Content title={textData.strengths.title}  text={textData.strengths.text}/>
@@ -35,9 +34,9 @@ const App = () => {
                             <Content title={textData.works.title}  text={textData.works.text}/>
                         </Route>
                 </Switch>
-            </Router>
                 <Aside />
             </div>
+            </Router>
         </div>
     )
 }
