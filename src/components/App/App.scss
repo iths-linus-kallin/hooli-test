@@ -3,7 +3,7 @@
 // TEXT
 @mixin h1(){
     font-family: 'Red Hat Text', sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 500;
     color: $black;
     padding-bottom: 3rem;
@@ -32,7 +32,7 @@
 // COLORS
 $black: black;
 $white: white;
-$light-blue: #D8F8FF;
+$light-blue: #e9fbff;
 $grey: #3E3E3E;
 $light-grey: #7e7e7e;
 
