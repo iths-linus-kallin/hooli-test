@@ -2,10 +2,14 @@
 
 .header {
     align-items: center;
-    background-color: #D8F8FF;
+    background-color: $light-blue;
+    background-image: url(/figma/cloud.png), url(/figma/cloud.png);
+    background-position: left center, right center;
+    background-size: 500px, 350px;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    height: 11.1rem;
+    height: 9rem;
 
     &__svg-logo {
         height: 4.7rem;
@@ -14,6 +18,8 @@
     }
 
     &__nav-section {
+        align-self: flex-end;
+        padding-bottom: 1.5rem;
         margin-right: 1.5rem;
     }
 
@@ -26,4 +32,11 @@
     &__nav-section a:hover {
         color: $light-grey;
     }
+
+    // &__clicked {
+    //     padding: 1rem 1rem;
+    //     padding-bottom: inherit;
+    //     background-color: white;
+    //     border-radius: 1rem 1rem 0 0;
+    // }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Content.scss";
 
-const Content = ({title, text}) => {
+const Content = () => {
   return (
     <div className="Content">
       <h1 className="Content__Title">

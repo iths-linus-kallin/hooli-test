@@ -1,6 +1,7 @@
 import React from 'react'
 
 import "./App.scss";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 // BEM = Block__Element--Modifier
 
 import Header from "../Header/Header";
@@ -19,6 +20,14 @@ const App = () => {
             </h1> */}
             <Header />
             <div className="App__Row">
+            <Router>
+                <Switch>
+                    <Route path="/strength"><Content /></Route>
+                    <Route path="/wishes"><Content /></Route>
+                    <Route path="/flaws"><Content /></Route>
+                    <Route path="/work"><Content /></Route>
+                </Switch>
+            </Router>
                 <Content />
                 <Aside />
             </div>
