@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hooli-website/precache-manifest.940f4f86466c5c2cc66b2177fa6594ca.js"
+  "/hooli-website/precache-manifest.01ab6483dabf2c81d237597d217b99ff.js"
 );
 
 self.addEventListener('message', (event) => {
