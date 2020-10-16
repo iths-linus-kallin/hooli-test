@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div className={ block() }>
-      <Route path="/">
+      <Route path="/hooli-website">
         <img src="figma/Hooli-logo.svg" alt="" className={ block("svg-logo") }/>
           <nav className={ block("nav-section") }>
             <NavLink to="/strengths"> Vår styrka </NavLink>
