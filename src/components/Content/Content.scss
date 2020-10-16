@@ -1,9 +1,9 @@
 @import "../App/App.scss";
 
 .Content {
-
-  width: calc(977/1440 *100);
-  padding: 6vw;
+  margin: 0;
+  width: calc(997/1440 * 100%);
+  padding: 6rem 12.1rem 0;
 
   &__Title{
     @include h1();
@@ -11,5 +11,6 @@
 
   &__Text{
     @include p();
+    white-space: pre-wrap;
   }  
 }

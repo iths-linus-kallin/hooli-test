@@ -55,7 +55,7 @@ const Aside = () => {
     {
       name: "Jessica Schwabegger",
       img: "jessica.jpg",
-      description: "Professionell kodare",
+      description: "Professionell fiskare",
       id: 3,
       alt: "Jessica",
       focal: {
@@ -65,26 +65,21 @@ const Aside = () => {
     }
   ];
 
+  const slideShow = () => {
+    let arr = [];
+    for(let i = 16; i > 0; i--){
+      arr = [...arr, <img src={`images/${i}.jpg`} alt="" className="Aside__SideImage"/>]
+    }
+    return arr;
+  }
+  
+
+
   return (
     <aside className="Aside">
 
       <div className="Aside__SideImage">
-        <img src="images/16.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/15.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/14.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/13.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/12.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/11.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/10.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/9.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/8.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/7.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/6.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/5.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/4.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/3.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/2.jpg" alt="" className="Aside__AsideImage"/>
-        <img src="images/1.jpg" alt="" className="Aside__AsideImage"/>
+        {slideShow()}
       </div>
 
       <section className="Aside__Employees">
