@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/hooli-website/static/css/main.6568b054.chunk.css",
+    "main.js": "/hooli-website/static/js/main.9c112ec3.chunk.js",
+    "main.js.map": "/hooli-website/static/js/main.9c112ec3.chunk.js.map",
+    "runtime-main.js": "/hooli-website/static/js/runtime-main.b5980940.js",
+    "runtime-main.js.map": "/hooli-website/static/js/runtime-main.b5980940.js.map",
+    "static/js/2.55890902.chunk.js": "/hooli-website/static/js/2.55890902.chunk.js",
+    "static/js/2.55890902.chunk.js.map": "/hooli-website/static/js/2.55890902.chunk.js.map",
+    "index.html": "/hooli-website/index.html",
+    "precache-manifest.940f4f86466c5c2cc66b2177fa6594ca.js": "/hooli-website/precache-manifest.940f4f86466c5c2cc66b2177fa6594ca.js",
+    "service-worker.js": "/hooli-website/service-worker.js",
+    "static/css/main.6568b054.chunk.css.map": "/hooli-website/static/css/main.6568b054.chunk.css.map",
+    "static/js/2.55890902.chunk.js.LICENSE.txt": "/hooli-website/static/js/2.55890902.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5980940.js",
+    "static/js/2.55890902.chunk.js",
+    "static/css/main.6568b054.chunk.css",
+    "static/js/main.9c112ec3.chunk.js"
+  ]
+}
